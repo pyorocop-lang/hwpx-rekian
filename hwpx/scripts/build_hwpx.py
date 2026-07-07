@@ -44,7 +44,13 @@ SKILL_DIR = SCRIPT_DIR.parent
 TEMPLATES_DIR = SKILL_DIR / "templates"
 BASE_DIR = TEMPLATES_DIR / "base"
 
-AVAILABLE_TEMPLATES = ["gonmun", "report", "minutes"]
+# Overlay templates are every subdirectory of templates/ except the "base"
+# skeleton. Discovered dynamically so new overlays need no code change.
+AVAILABLE_TEMPLATES = sorted(
+    p.name
+    for p in TEMPLATES_DIR.iterdir()
+    if p.is_dir() and p.name != "base"
+) if TEMPLATES_DIR.is_dir() else []
 
 
 def validate_xml(filepath: Path) -> None:

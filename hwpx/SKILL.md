@@ -48,7 +48,8 @@ source "$VENV"
 │   ├── gonmun/                           # 공문 오버레이 (header.xml, section0.xml)
 │   ├── report/                           # 보고서 오버레이
 │   ├── minutes/                          # 회의록 오버레이
-│   └── proposal/                         # 제안서/사업개요 오버레이 (색상 헤더바, 번호 배지)
+│   ├── proposal/                         # 제안서/사업개요 오버레이 (색상 헤더바, 번호 배지)
+│   └── govplan/                          # 정부부처 업무계획/실적보고 오버레이 (표지 + 개요형 본문)
 ├── examples/
 │   ├── 01_basic_document.sh              # XML로 기본 문서 빌드
 │   ├── 02_gonmun_example.sh              # 공문 템플릿 사용
@@ -67,7 +68,7 @@ source "$VENV"
 
 ### 흐름
 
-1. **템플릿 선택** (base/gonmun/report/minutes/proposal)
+1. **템플릿 선택** (base/gonmun/report/minutes/proposal/govplan)
 2. **section0.xml 작성** (본문 내용)
 3. **(선택) header.xml 수정** (새 스타일 추가 필요 시)
 4. **build_hwpx.py로 빌드**
@@ -380,6 +381,40 @@ section0.xml의 첫 문단(`<hp:p>`)의 첫 런(`<hp:run>`)에 반드시 `<hp:se
 
 ---
 
+### govplan (정부부처 업무계획/실적보고) — report + 추가
+
+정부부처 업무계획·추진대책·실적보고서 양식. `report` 오버레이를 기반으로 **표지(파란 제목바, 회의체 박스, 관계부처 합동)** 와 **개요형 본문(□/ㅇ/-/※/① 계층, [카테고리] 헤더, 부처명 attribution)** 스타일을 추가했다. `report`의 charPr 0~15 / paraPr 0~27 / borderFill 1~6을 그대로 상속한다.
+
+| ID | 유형 | 설명 |
+|----|------|------|
+| charPr 16 | 글자 | 28pt 볼드 함초롬돋움 (표지 대제목) |
+| charPr 17 | 글자 | 11pt 함초롬돋움 (회의체/발간정보 박스) |
+| charPr 18 | 글자 | 15pt 함초롬돋움 (발행일자) |
+| charPr 19 | 글자 | 18pt 함초롬돋움, 자간 넓게 (관계부처 합동 등 발행 주체) |
+| charPr 20 | 글자 | 9pt 함초롬돋움 회색(#595959) (부처명 attribution) |
+| charPr 21 | 글자 | 13pt 볼드 함초롬돋움 남색(#1F4E79) ([카테고리] 헤더) |
+| charPr 22 | 글자 | 15pt 볼드 함초롬돋움 (□ 대항목) |
+| paraPr 28 | 문단 | CENTER (표지 회의체박스/날짜/합동, 여백줄) |
+| paraPr 29 | 문단 | CENTER + 파란 상/하 굵은 바(borderFill 7), 상하 여백 (표지 제목) |
+| paraPr 30 | 문단 | LEFT + 연한 파란 배경바(borderFill 8) ([카테고리] 헤더) |
+| paraPr 31 | 문단 | □ 대항목 (left 300, 내어쓰기 -300) |
+| paraPr 32 | 문단 | ㅇ 중항목 (left 700, 내어쓰기 -300) |
+| paraPr 33 | 문단 | - 세부 (left 1100, 내어쓰기 -300) |
+| paraPr 34 | 문단 | * / ※ 각주 (left 1500, 내어쓰기 -300) |
+| paraPr 35 | 문단 | ①②③ 열거 (left 700, 내어쓰기 -300) |
+| paraPr 36 | 문단 | LEFT 무들여쓰기 (표지 회의체 박스 컨테이너) |
+| borderFill 7 | 테두리 | 상/하 1.0mm 굵은 파란선 #2E75B6 (표지 제목바) |
+| borderFill 8 | 테두리 | 연한 파란 배경 #DEEAF6 (카테고리 헤더바) |
+
+**핵심 원칙**:
+- **들여쓰기는 공백이 아닌 paraPr 사용**: □→31, ㅇ→32, -→33, */※→34, ①②③→35. 모두 내어쓰기(hanging)라 줄바꿈 시 둘째 줄이 기호 뒤에 정렬된다.
+- **섹션 제목**(Ⅰ. Ⅱ. Ⅲ.)은 `report`의 paraPr 27(상/하 테두리선) + charPr 12(16pt 볼드) 조합.
+- **부처명 attribution**은 □ 문단 끝에 `charPrIDRef="20"` 런을 덧붙인다 (예: `□ … 강화` + `산업부`).
+- **표지 제목**은 paraPr 29 한 문단에 넣는다. 파란 바는 문단 상/하 테두리로 자동 생성된다.
+- **실적보고서**로 쓸 때: Ⅰ.추진실적 / Ⅱ.미흡사항·개선계획 구조로 섹션 제목만 바꾸고, 성과지표 표 헤더를 `계획 / 실적 / 달성률`로 교체한다.
+
+---
+
 ## 워크플로우 2: 기존 문서 편집 (unpack → Edit → pack)
 
 ```bash
@@ -582,6 +617,36 @@ def ensure_hwpx(path: str) -> str:
 - 변환기가 백그라운드로 실행되므로 `sleep 4` 이상 대기 필요
 - 변환 결과는 원본 `.hwp`와 **같은 폴더**에 생성됨
 - `.hwpx` 파일이 이미 존재하면 덮어씀
+
+### 리눅스/서버 환경: 바이너리 HWP 참조 추출 (Windows 변환기 없이)
+
+HwpxConverter.exe는 Windows 전용이라 리눅스/CI 환경에서는 쓸 수 없다. 이때 바이너리
+`.hwp`(v5, OLE 복합 파일)를 **레퍼런스로 학습**하려면 아래 도구로 내용·구조·미리보기를 추출한다.
+(HWPX로 완전 변환하는 것이 아니라, 레이아웃을 파악해 템플릿을 재구성하는 용도)
+
+```bash
+pip install pyhwp olefile six   # hwp5txt/hwp5html + PrvImage 추출용
+
+# 1. 본문 텍스트 (표는 <표> 마커로 표시, □/ㅇ/-/①/[카테고리] 계층 그대로 보존)
+hwp5txt "정부문서.hwp" 2>/dev/null
+
+# 2. 서식 힌트가 필요하면 HTML로 (폰트/색상/표)
+hwp5html --output ./ref_html "정부문서.hwp" 2>/dev/null
+```
+
+```python
+# 3. 1페이지 렌더링 미리보기 추출 → Read 도구로 실제 레이아웃 육안 확인
+import olefile
+f = olefile.OleFileIO("정부문서.hwp")
+d = f.openstream(["PrvImage"]).read()          # 표지/1페이지 썸네일
+ext = "png" if d[:8] == b"\x89PNG\r\n\x1a\n" else "gif"
+open(f"prv.{ext}", "wb").write(d); f.close()
+```
+
+- `hwp5txt` 경고(`undefined UnderlineStyle value` 등)는 stderr로 나오므로 `2>/dev/null`로 버린다.
+- **PrvImage**(내장 미리보기)가 표지·색상·바 위치 등 실제 시각 요소를 가장 빠르게 알려준다.
+- 추출한 구조/미리보기를 바탕으로 `templates/`에 새 오버레이(header.xml + section0.xml)를 구성한다.
+- LibreOffice(soffice)는 별도 확장(H2Orestart) 없이는 HWP v5/HWPX를 열지 못하므로 PDF 변환에 의존하지 말 것.
 
 ---
 <!-- 커스텀 추가 끝 -->
