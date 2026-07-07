@@ -447,6 +447,30 @@ python3 "$SKILL_DIR/scripts/build_hwpx.py" \
 
 ---
 
+## 워크플로우 7: 마크다운 → HWPX 변환
+
+마크다운 부분집합을 템플릿 스타일에 매핑해 `.hwpx`로 조립한다. lxml 외 의존성 없음.
+
+```bash
+source "$VENV"
+
+# 기본(report 스타일)
+python3 "$SKILL_DIR/scripts/md_to_hwpx.py" input.md --output result.hwpx
+
+# 템플릿 선택 + 메타
+python3 "$SKILL_DIR/scripts/md_to_hwpx.py" input.md --template govplan \
+  --title "제목" --creator "작성자" --output result.hwpx
+```
+
+**매핑**: `#`→문서 제목, `##`→섹션 제목, `###`→소제목/□, `- * +`→ㅇ/-/· (들여쓰기 중첩),
+`1.`→번호 목록, `**굵게**`→볼드 런, `> 인용`→각주(작은 글씨), 코드펜스→고딕 프리포맷,
+`| 표 |`(GFM)→`hp:tbl`(열너비 자동 균등), `[링크](url)`→표시 텍스트, `---`→빈 줄.
+
+**한계**: 표지 박스·번호 배지·이미지(`![]()`)는 마크다운 문법으로 표현 불가 → 변환 후 수동 보강.
+`--template`은 report(기본)/govplan/gonmun에 최적 매핑, minutes/proposal은 report 프로파일 사용.
+
+---
+
 ## 워크플로우 2: 기존 문서 편집 (unpack → Edit → pack)
 
 ```bash
@@ -576,6 +600,7 @@ python3 "$SKILL_DIR/scripts/validate.py" result.hwpx
 | `scripts/office/pack.py` | 디렉토리 → HWPX (mimetype first) |
 | `scripts/validate.py` | HWPX 파일 구조 검증 |
 | `scripts/text_extract.py` | HWPX 텍스트 추출 |
+| `scripts/md_to_hwpx.py` | **마크다운 → HWPX** 변환 (제목/목록/표/굵게/인용/코드) |
 
 ## 단위 변환
 
