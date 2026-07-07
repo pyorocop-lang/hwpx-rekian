@@ -394,6 +394,10 @@ section0.xml의 첫 문단(`<hp:p>`)의 첫 런(`<hp:run>`)에 반드시 `<hp:se
 | charPr 20 | 글자 | 9pt 함초롬돋움 회색(#595959) (부처명 attribution) |
 | charPr 21 | 글자 | 13pt 볼드 함초롬돋움 남색(#1F4E79) ([카테고리] 헤더) |
 | charPr 22 | 글자 | 15pt 볼드 함초롬돋움 (□ 대항목) |
+| charPr 23 | 글자 | 16pt 볼드 흰색 함초롬돋움 (번호 배지 숫자, 남색 배경 위) |
+| charPr 24 | 글자 | 15pt 볼드 남색(#1C3D62) 함초롬돋움 (비전 문구) |
+| charPr 25 | 글자 | 15pt 볼드 남색(#1C3D62) 함초롬돋움 (◇ 전략목표) |
+| charPr 26 | 글자 | 12pt 함초롬돋움 (▪ 핵심과제 항목) |
 | paraPr 28 | 문단 | CENTER (표지 회의체박스/날짜/합동, 여백줄) |
 | paraPr 29 | 문단 | CENTER + 파란 상/하 굵은 바(borderFill 7), 상하 여백 (표지 제목) |
 | paraPr 30 | 문단 | LEFT + 연한 파란 배경바(borderFill 8) ([카테고리] 헤더) |
@@ -403,8 +407,36 @@ section0.xml의 첫 문단(`<hp:p>`)의 첫 런(`<hp:run>`)에 반드시 `<hp:se
 | paraPr 34 | 문단 | * / ※ 각주 (left 1500, 내어쓰기 -300) |
 | paraPr 35 | 문단 | ①②③ 열거 (left 700, 내어쓰기 -300) |
 | paraPr 36 | 문단 | LEFT 무들여쓰기 (표지 회의체 박스 컨테이너) |
+| paraPr 37 | 문단 | CENTER + 상/하 남색선 + 배경(borderFill 10) (비전 박스) |
+| paraPr 38 | 문단 | LEFT, prev 여백 (◇ 전략목표 divider) |
+| paraPr 39 | 문단 | LEFT left 400 (▪ 핵심과제 항목) |
 | borderFill 7 | 테두리 | 상/하 1.0mm 굵은 파란선 #2E75B6 (표지 제목바) |
 | borderFill 8 | 테두리 | 연한 파란 배경 #DEEAF6 (카테고리 헤더바) |
+| borderFill 9 | 테두리 | 남색 배경 #1C3D62 (번호 배지 셀) |
+| borderFill 10 | 테두리 | 상/하 0.4mm 남색선 + 연한 배경 #DFE6F7 (비전 박스) |
+
+**구성 요소(section0 데모 순서)**: 표지(회의체박스·파란바 제목·발행일자·발행주체) → **목차(순서) 박스** → 섹션제목(Ⅰ) + **번호 배지 헤더**(남색 배지 + 소섹션명) → □/ㅇ/-/* 본문 → [카테고리] + □ + 부처명 → **비전 박스** + **◇ 전략목표 / ▪ 핵심과제** → 성과지표 표.
+
+**번호 배지 헤더**: 2셀 표 — 배지 셀(borderFill 9 남색 + charPr 23 흰색 숫자) + 제목 셀(borderFill 2 무테두리 + charPr 22).
+**비전 박스**: paraPr 37 한 문단(가운데, 상/하 남색선 + 배경) + charPr 24.
+
+### 정밀 재현: 특정 정부문서 레이아웃 그대로 복제
+
+`govplan`은 정부 업무계획의 **공통 골격**을 브랜드 중립 색으로 재사용하는 템플릿이다. 반면 특정
+기관 문서(예: 통계청 2025 업무계획)의 **디자인을 픽셀 단위로 복제**하려면 그 문서 고유의 스타일
+정의를 그대로 쓴다 — 워크플로 5(레퍼런스 기반 생성) 또는 워크플로 3(레퍼런스 보존형 재조립).
+
+```bash
+# 레퍼런스 HWPX의 header.xml(스타일 전체) 추출 후 그대로 재사용
+python3 "$SKILL_DIR/scripts/analyze_template.py" reference.hwpx \
+  --extract-header /tmp/ref_header.xml --extract-section /tmp/ref_section.xml
+python3 "$SKILL_DIR/scripts/build_hwpx.py" \
+  --header /tmp/ref_header.xml --section /tmp/new_section0.xml --output result.hwpx
+```
+
+- 원문 표지의 **정부상징·기관 로고**는 `BinData`(이미지) 스트림에 들어 있어 header/section만으로는
+  재현되지 않는다. 로고까지 필요하면 원본을 unpack→편집→pack 하는 워크플로 2/3로 진행한다.
+- 픽셀 복제는 그 기관 고유 디자인이므로 공개 템플릿(`templates/`)에 병합하지 말고 레퍼런스로만 사용한다.
 
 **핵심 원칙**:
 - **들여쓰기는 공백이 아닌 paraPr 사용**: □→31, ㅇ→32, -→33, */※→34, ①②③→35. 모두 내어쓰기(hanging)라 줄바꿈 시 둘째 줄이 기호 뒤에 정렬된다.

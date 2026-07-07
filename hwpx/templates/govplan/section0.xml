@@ -100,11 +100,65 @@
   </hp:p>
 
   <!-- ============================================================ -->
+  <!-- 목차 (순서) — 별도 페이지 -->
+  <!-- ============================================================ -->
+  <hp:p id="1000000015" paraPrIDRef="28" styleIDRef="0" pageBreak="1" columnBreak="0" merged="0">
+    <hp:run charPrIDRef="12"><hp:t>순  서</hp:t></hp:run>
+  </hp:p>
+  <hp:p id="1000000016" paraPrIDRef="28" styleIDRef="0" pageBreak="0" columnBreak="0" merged="0"><hp:run charPrIDRef="0"><hp:t/></hp:run></hp:p>
+  <hp:p id="1000000017" paraPrIDRef="28" styleIDRef="0" pageBreak="0" columnBreak="0" merged="0">
+    <hp:run charPrIDRef="0">
+      <hp:tbl id="1000000910" zOrder="0" numberingType="TABLE" textWrap="TOP_AND_BOTTOM" textFlow="BOTH_SIDES" lock="0" dropcapstyle="None" pageBreak="CELL" repeatHeader="0" rowCnt="1" colCnt="1" cellSpacing="0" borderFillIDRef="3" noAdjust="0">
+        <hp:sz width="34016" widthRelTo="ABSOLUTE" height="12000" heightRelTo="ABSOLUTE" protect="0"/>
+        <hp:pos treatAsChar="1" affectLSpacing="0" flowWithText="1" allowOverlap="0" holdAnchorAndSO="0" vertRelTo="PARA" horzRelTo="COLUMN" vertAlign="TOP" horzAlign="CENTER" vertOffset="0" horzOffset="0"/>
+        <hp:outMargin left="0" right="0" top="0" bottom="0"/>
+        <hp:inMargin left="0" right="0" top="0" bottom="0"/>
+        <hp:tr>
+          <hp:tc name="" header="0" hasMargin="1" protect="0" editable="0" dirty="0" borderFillIDRef="3">
+            <hp:subList id="" textDirection="HORIZONTAL" lineWrap="BREAK" vertAlign="CENTER" linkListIDRef="0" linkListNextIDRef="0" textWidth="0" textHeight="0" hasTextRef="0" hasNumRef="0">
+              <hp:p paraPrIDRef="32" styleIDRef="0" pageBreak="0" columnBreak="0" merged="0" id="1000000911"><hp:run charPrIDRef="22"><hp:t>Ⅰ. {{첫째 장 제목}}</hp:t></hp:run></hp:p>
+              <hp:p paraPrIDRef="32" styleIDRef="0" pageBreak="0" columnBreak="0" merged="0" id="1000000912"><hp:run charPrIDRef="22"><hp:t>Ⅱ. {{둘째 장 제목}}</hp:t></hp:run></hp:p>
+              <hp:p paraPrIDRef="32" styleIDRef="0" pageBreak="0" columnBreak="0" merged="0" id="1000000913"><hp:run charPrIDRef="22"><hp:t>Ⅲ. {{셋째 장 제목}}</hp:t></hp:run></hp:p>
+              <hp:p paraPrIDRef="32" styleIDRef="0" pageBreak="0" columnBreak="0" merged="0" id="1000000914"><hp:run charPrIDRef="22"><hp:t>Ⅳ. {{넷째 장 제목}}</hp:t></hp:run></hp:p>
+            </hp:subList>
+            <hp:cellAddr colAddr="0" rowAddr="0"/><hp:cellSpan colSpan="1" rowSpan="1"/><hp:cellSz width="34016" height="12000"/><hp:cellMargin left="1000" right="1000" top="800" bottom="800"/>
+          </hp:tc>
+        </hp:tr>
+      </hp:tbl>
+    </hp:run>
+  </hp:p>
+
+  <!-- ============================================================ -->
   <!-- 본문 (BODY) — 페이지 나눔 -->
   <!-- ============================================================ -->
   <!-- Ⅰ. 섹션 제목 (상/하 테두리선) -->
   <hp:p id="1000000020" paraPrIDRef="27" styleIDRef="0" pageBreak="1" columnBreak="0" merged="0">
     <hp:run charPrIDRef="12"><hp:t>Ⅰ. 추진 배경</hp:t></hp:run>
+  </hp:p>
+  <!-- 번호 배지 섹션 헤더 (남색 배지 + 제목) -->
+  <hp:p id="1000000018" paraPrIDRef="0" styleIDRef="0" pageBreak="0" columnBreak="0" merged="0">
+    <hp:run charPrIDRef="0">
+      <hp:tbl id="1000000920" zOrder="0" numberingType="TABLE" textWrap="TOP_AND_BOTTOM" textFlow="BOTH_SIDES" lock="0" dropcapstyle="None" pageBreak="CELL" repeatHeader="0" rowCnt="1" colCnt="2" cellSpacing="0" borderFillIDRef="2" noAdjust="0">
+        <hp:sz width="42520" widthRelTo="ABSOLUTE" height="3000" heightRelTo="ABSOLUTE" protect="0"/>
+        <hp:pos treatAsChar="1" affectLSpacing="0" flowWithText="1" allowOverlap="0" holdAnchorAndSO="0" vertRelTo="PARA" horzRelTo="COLUMN" vertAlign="TOP" horzAlign="LEFT" vertOffset="0" horzOffset="0"/>
+        <hp:outMargin left="0" right="0" top="0" bottom="0"/>
+        <hp:inMargin left="0" right="0" top="0" bottom="0"/>
+        <hp:tr>
+          <hp:tc name="" header="0" hasMargin="1" protect="0" editable="0" dirty="0" borderFillIDRef="9">
+            <hp:subList id="" textDirection="HORIZONTAL" lineWrap="BREAK" vertAlign="CENTER" linkListIDRef="0" linkListNextIDRef="0" textWidth="0" textHeight="0" hasTextRef="0" hasNumRef="0">
+              <hp:p paraPrIDRef="21" styleIDRef="0" pageBreak="0" columnBreak="0" merged="0" id="1000000921"><hp:run charPrIDRef="23"><hp:t>1</hp:t></hp:run></hp:p>
+            </hp:subList>
+            <hp:cellAddr colAddr="0" rowAddr="0"/><hp:cellSpan colSpan="1" rowSpan="1"/><hp:cellSz width="3000" height="3000"/><hp:cellMargin left="141" right="141" top="141" bottom="141"/>
+          </hp:tc>
+          <hp:tc name="" header="0" hasMargin="1" protect="0" editable="0" dirty="0" borderFillIDRef="2">
+            <hp:subList id="" textDirection="HORIZONTAL" lineWrap="BREAK" vertAlign="CENTER" linkListIDRef="0" linkListNextIDRef="0" textWidth="0" textHeight="0" hasTextRef="0" hasNumRef="0">
+              <hp:p paraPrIDRef="22" styleIDRef="0" pageBreak="0" columnBreak="0" merged="0" id="1000000922"><hp:run charPrIDRef="22"><hp:t>{{소섹션 제목 예: 주요 정책성과}}</hp:t></hp:run></hp:p>
+            </hp:subList>
+            <hp:cellAddr colAddr="1" rowAddr="0"/><hp:cellSpan colSpan="1" rowSpan="1"/><hp:cellSz width="39520" height="3000"/><hp:cellMargin left="510" right="141" top="141" bottom="141"/>
+          </hp:tc>
+        </hp:tr>
+      </hp:tbl>
+    </hp:run>
   </hp:p>
   <hp:p id="1000000021" paraPrIDRef="28" styleIDRef="0" pageBreak="0" columnBreak="0" merged="0"><hp:run charPrIDRef="0"><hp:t/></hp:run></hp:p>
   <!-- □ 대항목 -->
@@ -147,6 +201,24 @@
     <hp:run charPrIDRef="0"><hp:t>② {{세부 과제 2}}</hp:t></hp:run>
   </hp:p>
   <hp:p id="1000000036" paraPrIDRef="28" styleIDRef="0" pageBreak="0" columnBreak="0" merged="0"><hp:run charPrIDRef="0"><hp:t/></hp:run></hp:p>
+
+  <!-- 비전 박스 (상/하 남색선 + 연한 배경, 가운데) -->
+  <hp:p id="1000000037" paraPrIDRef="37" styleIDRef="0" pageBreak="0" columnBreak="0" merged="0">
+    <hp:run charPrIDRef="24"><hp:t>[비전] {{비전 문구}}</hp:t></hp:run>
+  </hp:p>
+  <hp:p id="1000000038" paraPrIDRef="28" styleIDRef="0" pageBreak="0" columnBreak="0" merged="0"><hp:run charPrIDRef="0"><hp:t/></hp:run></hp:p>
+  <!-- ◇ 전략목표 divider -->
+  <hp:p id="1000000039" paraPrIDRef="38" styleIDRef="0" pageBreak="0" columnBreak="0" merged="0">
+    <hp:run charPrIDRef="25"><hp:t>◇ {{전략목표}}</hp:t></hp:run>
+  </hp:p>
+  <!-- ▪ 핵심과제 -->
+  <hp:p id="1000000051" paraPrIDRef="39" styleIDRef="0" pageBreak="0" columnBreak="0" merged="0">
+    <hp:run charPrIDRef="26"><hp:t>▪ {{핵심과제 1}}</hp:t></hp:run>
+  </hp:p>
+  <hp:p id="1000000052" paraPrIDRef="39" styleIDRef="0" pageBreak="0" columnBreak="0" merged="0">
+    <hp:run charPrIDRef="26"><hp:t>▪ {{핵심과제 2}}</hp:t></hp:run>
+  </hp:p>
+  <hp:p id="1000000053" paraPrIDRef="28" styleIDRef="0" pageBreak="0" columnBreak="0" merged="0"><hp:run charPrIDRef="0"><hp:t/></hp:run></hp:p>
 
   <!-- Ⅲ. 성과지표 (표) -->
   <hp:p id="1000000040" paraPrIDRef="27" styleIDRef="0" pageBreak="0" columnBreak="0" merged="0">

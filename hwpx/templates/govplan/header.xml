@@ -60,7 +60,7 @@
         </hh:font>
       </hh:fontface>
     </hh:fontfaces>
-    <hh:borderFills itemCnt="8">
+    <hh:borderFills itemCnt="10">
       <hh:borderFill id="1" threeD="0" shadow="0" centerLine="NONE" breakCellSeparateLine="0">
         <hh:slash type="NONE" Crooked="0" isCounter="0"/>
         <hh:backSlash type="NONE" Crooked="0" isCounter="0"/>
@@ -145,8 +145,32 @@
           <hc:winBrush faceColor="#DEEAF6" hatchColor="#999999" alpha="0"/>
         </hc:fillBrush>
       </hh:borderFill>
+      <hh:borderFill id="9" threeD="0" shadow="0" centerLine="NONE" breakCellSeparateLine="0">
+        <hh:slash type="NONE" Crooked="0" isCounter="0"/>
+        <hh:backSlash type="NONE" Crooked="0" isCounter="0"/>
+        <hh:leftBorder type="NONE" width="0.1 mm" color="#000000"/>
+        <hh:rightBorder type="NONE" width="0.1 mm" color="#000000"/>
+        <hh:topBorder type="NONE" width="0.1 mm" color="#000000"/>
+        <hh:bottomBorder type="NONE" width="0.1 mm" color="#000000"/>
+        <hh:diagonal type="SOLID" width="0.1 mm" color="#000000"/>
+        <hc:fillBrush>
+          <hc:winBrush faceColor="#1C3D62" hatchColor="#999999" alpha="0"/>
+        </hc:fillBrush>
+      </hh:borderFill>
+      <hh:borderFill id="10" threeD="0" shadow="0" centerLine="NONE" breakCellSeparateLine="0">
+        <hh:slash type="NONE" Crooked="0" isCounter="0"/>
+        <hh:backSlash type="NONE" Crooked="0" isCounter="0"/>
+        <hh:leftBorder type="NONE" width="0.1 mm" color="#000000"/>
+        <hh:rightBorder type="NONE" width="0.1 mm" color="#000000"/>
+        <hh:topBorder type="SOLID" width="0.4 mm" color="#1C3D62"/>
+        <hh:bottomBorder type="SOLID" width="0.4 mm" color="#1C3D62"/>
+        <hh:diagonal type="SOLID" width="0.1 mm" color="#000000"/>
+        <hc:fillBrush>
+          <hc:winBrush faceColor="#DFE6F7" hatchColor="#999999" alpha="0"/>
+        </hc:fillBrush>
+      </hh:borderFill>
     </hh:borderFills>
-    <hh:charProperties itemCnt="23">
+    <hh:charProperties itemCnt="27">
       <hh:charPr id="0" height="1000" textColor="#000000" shadeColor="none" useFontSpace="0" useKerning="0" symMark="NONE" borderFillIDRef="2">
         <hh:fontRef hangul="1" latin="1" hanja="1" japanese="1" other="1" symbol="1" user="1"/>
         <hh:ratio hangul="100" latin="100" hanja="100" japanese="100" other="100" symbol="100" user="100"/>
@@ -411,6 +435,53 @@
         <hh:outline type="NONE"/>
         <hh:shadow type="NONE" color="#C0C0C0" offsetX="10" offsetY="10"/>
       </hh:charPr>
+      <hh:charPr id="23" height="1600" textColor="#FFFFFF" shadeColor="none" useFontSpace="0" useKerning="0" symMark="NONE" borderFillIDRef="2">
+        <hh:fontRef hangul="0" latin="0" hanja="0" japanese="0" other="0" symbol="0" user="0"/>
+        <hh:ratio hangul="100" latin="100" hanja="100" japanese="100" other="100" symbol="100" user="100"/>
+        <hh:spacing hangul="0" latin="0" hanja="0" japanese="0" other="0" symbol="0" user="0"/>
+        <hh:relSz hangul="100" latin="100" hanja="100" japanese="100" other="100" symbol="100" user="100"/>
+        <hh:offset hangul="0" latin="0" hanja="0" japanese="0" other="0" symbol="0" user="0"/>
+        <hh:bold/>
+        <hh:underline type="NONE" shape="SOLID" color="#000000"/>
+        <hh:strikeout shape="NONE" color="#000000"/>
+        <hh:outline type="NONE"/>
+        <hh:shadow type="NONE" color="#C0C0C0" offsetX="10" offsetY="10"/>
+      </hh:charPr>
+      <hh:charPr id="24" height="1500" textColor="#1C3D62" shadeColor="none" useFontSpace="0" useKerning="0" symMark="NONE" borderFillIDRef="2">
+        <hh:fontRef hangul="0" latin="0" hanja="0" japanese="0" other="0" symbol="0" user="0"/>
+        <hh:ratio hangul="100" latin="100" hanja="100" japanese="100" other="100" symbol="100" user="100"/>
+        <hh:spacing hangul="0" latin="0" hanja="0" japanese="0" other="0" symbol="0" user="0"/>
+        <hh:relSz hangul="100" latin="100" hanja="100" japanese="100" other="100" symbol="100" user="100"/>
+        <hh:offset hangul="0" latin="0" hanja="0" japanese="0" other="0" symbol="0" user="0"/>
+        <hh:bold/>
+        <hh:underline type="NONE" shape="SOLID" color="#000000"/>
+        <hh:strikeout shape="NONE" color="#000000"/>
+        <hh:outline type="NONE"/>
+        <hh:shadow type="NONE" color="#C0C0C0" offsetX="10" offsetY="10"/>
+      </hh:charPr>
+      <hh:charPr id="25" height="1500" textColor="#1C3D62" shadeColor="none" useFontSpace="0" useKerning="0" symMark="NONE" borderFillIDRef="2">
+        <hh:fontRef hangul="0" latin="0" hanja="0" japanese="0" other="0" symbol="0" user="0"/>
+        <hh:ratio hangul="100" latin="100" hanja="100" japanese="100" other="100" symbol="100" user="100"/>
+        <hh:spacing hangul="0" latin="0" hanja="0" japanese="0" other="0" symbol="0" user="0"/>
+        <hh:relSz hangul="100" latin="100" hanja="100" japanese="100" other="100" symbol="100" user="100"/>
+        <hh:offset hangul="0" latin="0" hanja="0" japanese="0" other="0" symbol="0" user="0"/>
+        <hh:bold/>
+        <hh:underline type="NONE" shape="SOLID" color="#000000"/>
+        <hh:strikeout shape="NONE" color="#000000"/>
+        <hh:outline type="NONE"/>
+        <hh:shadow type="NONE" color="#C0C0C0" offsetX="10" offsetY="10"/>
+      </hh:charPr>
+      <hh:charPr id="26" height="1200" textColor="#000000" shadeColor="none" useFontSpace="0" useKerning="0" symMark="NONE" borderFillIDRef="2">
+        <hh:fontRef hangul="0" latin="0" hanja="0" japanese="0" other="0" symbol="0" user="0"/>
+        <hh:ratio hangul="100" latin="100" hanja="100" japanese="100" other="100" symbol="100" user="100"/>
+        <hh:spacing hangul="0" latin="0" hanja="0" japanese="0" other="0" symbol="0" user="0"/>
+        <hh:relSz hangul="100" latin="100" hanja="100" japanese="100" other="100" symbol="100" user="100"/>
+        <hh:offset hangul="0" latin="0" hanja="0" japanese="0" other="0" symbol="0" user="0"/>
+        <hh:underline type="NONE" shape="SOLID" color="#000000"/>
+        <hh:strikeout shape="NONE" color="#000000"/>
+        <hh:outline type="NONE"/>
+        <hh:shadow type="NONE" color="#C0C0C0" offsetX="10" offsetY="10"/>
+      </hh:charPr>
     </hh:charProperties>
     <hh:tabProperties itemCnt="3">
       <hh:tabPr id="0" autoTabLeft="0" autoTabRight="0"/>
@@ -431,7 +502,7 @@
         <hh:paraHead start="1" level="10" align="LEFT" useInstWidth="1" autoIndent="1" widthAdjust="0" textOffsetType="PERCENT" textOffset="50" numFormat="ROMAN_SMALL" charPrIDRef="4294967295" checkable="1"/>
       </hh:numbering>
     </hh:numberings>
-    <hh:paraProperties itemCnt="37">
+    <hh:paraProperties itemCnt="40">
       <hh:paraPr id="0" tabPrIDRef="0" condense="0" fontLineHeight="0" snapToGrid="1" suppressLineNumbers="0" checked="0" textDir="LTR">
         <hh:align horizontal="JUSTIFY" vertical="BASELINE"/>
         <hh:heading type="NONE" idRef="0" level="0"/>
@@ -1517,6 +1588,93 @@
             <hh:margin>
               <hc:intent value="0" unit="HWPUNIT"/>
               <hc:left value="0" unit="HWPUNIT"/>
+              <hc:right value="0" unit="HWPUNIT"/>
+              <hc:prev value="0" unit="HWPUNIT"/>
+              <hc:next value="0" unit="HWPUNIT"/>
+            </hh:margin>
+            <hh:lineSpacing type="PERCENT" value="160" unit="HWPUNIT"/>
+          </hp:default>
+        </hp:switch>
+        <hh:border borderFillIDRef="2" offsetLeft="0" offsetRight="0" offsetTop="0" offsetBottom="0" connect="0" ignoreMargin="0"/>
+      </hh:paraPr>
+      <hh:paraPr id="37" tabPrIDRef="0" condense="0" fontLineHeight="0" snapToGrid="1" suppressLineNumbers="0" checked="0" textDir="LTR">
+        <hh:align horizontal="CENTER" vertical="BASELINE"/>
+        <hh:heading type="NONE" idRef="0" level="0"/>
+        <hh:breakSetting breakLatinWord="KEEP_WORD" breakNonLatinWord="BREAK_WORD" widowOrphan="0" keepWithNext="0" keepLines="0" pageBreakBefore="0" lineWrap="BREAK"/>
+        <hh:autoSpacing eAsianEng="0" eAsianNum="0"/>
+        <hp:switch>
+          <hp:case hp:required-namespace="http://www.hancom.co.kr/hwpml/2016/HwpUnitChar">
+            <hh:margin>
+              <hc:intent value="0" unit="HWPUNIT"/>
+              <hc:left value="0" unit="HWPUNIT"/>
+              <hc:right value="0" unit="HWPUNIT"/>
+              <hc:prev value="200" unit="HWPUNIT"/>
+              <hc:next value="200" unit="HWPUNIT"/>
+            </hh:margin>
+            <hh:lineSpacing type="PERCENT" value="160" unit="HWPUNIT"/>
+          </hp:case>
+          <hp:default>
+            <hh:margin>
+              <hc:intent value="0" unit="HWPUNIT"/>
+              <hc:left value="0" unit="HWPUNIT"/>
+              <hc:right value="0" unit="HWPUNIT"/>
+              <hc:prev value="200" unit="HWPUNIT"/>
+              <hc:next value="200" unit="HWPUNIT"/>
+            </hh:margin>
+            <hh:lineSpacing type="PERCENT" value="160" unit="HWPUNIT"/>
+          </hp:default>
+        </hp:switch>
+        <hh:border borderFillIDRef="10" offsetLeft="0" offsetRight="0" offsetTop="300" offsetBottom="300" connect="0" ignoreMargin="0"/>
+      </hh:paraPr>
+      <hh:paraPr id="38" tabPrIDRef="0" condense="0" fontLineHeight="0" snapToGrid="1" suppressLineNumbers="0" checked="0" textDir="LTR">
+        <hh:align horizontal="LEFT" vertical="BASELINE"/>
+        <hh:heading type="NONE" idRef="0" level="0"/>
+        <hh:breakSetting breakLatinWord="KEEP_WORD" breakNonLatinWord="BREAK_WORD" widowOrphan="0" keepWithNext="0" keepLines="0" pageBreakBefore="0" lineWrap="BREAK"/>
+        <hh:autoSpacing eAsianEng="0" eAsianNum="0"/>
+        <hp:switch>
+          <hp:case hp:required-namespace="http://www.hancom.co.kr/hwpml/2016/HwpUnitChar">
+            <hh:margin>
+              <hc:intent value="0" unit="HWPUNIT"/>
+              <hc:left value="0" unit="HWPUNIT"/>
+              <hc:right value="0" unit="HWPUNIT"/>
+              <hc:prev value="300" unit="HWPUNIT"/>
+              <hc:next value="100" unit="HWPUNIT"/>
+            </hh:margin>
+            <hh:lineSpacing type="PERCENT" value="160" unit="HWPUNIT"/>
+          </hp:case>
+          <hp:default>
+            <hh:margin>
+              <hc:intent value="0" unit="HWPUNIT"/>
+              <hc:left value="0" unit="HWPUNIT"/>
+              <hc:right value="0" unit="HWPUNIT"/>
+              <hc:prev value="300" unit="HWPUNIT"/>
+              <hc:next value="100" unit="HWPUNIT"/>
+            </hh:margin>
+            <hh:lineSpacing type="PERCENT" value="160" unit="HWPUNIT"/>
+          </hp:default>
+        </hp:switch>
+        <hh:border borderFillIDRef="2" offsetLeft="0" offsetRight="0" offsetTop="0" offsetBottom="0" connect="0" ignoreMargin="0"/>
+      </hh:paraPr>
+      <hh:paraPr id="39" tabPrIDRef="0" condense="0" fontLineHeight="0" snapToGrid="1" suppressLineNumbers="0" checked="0" textDir="LTR">
+        <hh:align horizontal="LEFT" vertical="BASELINE"/>
+        <hh:heading type="NONE" idRef="0" level="0"/>
+        <hh:breakSetting breakLatinWord="KEEP_WORD" breakNonLatinWord="BREAK_WORD" widowOrphan="0" keepWithNext="0" keepLines="0" pageBreakBefore="0" lineWrap="BREAK"/>
+        <hh:autoSpacing eAsianEng="0" eAsianNum="0"/>
+        <hp:switch>
+          <hp:case hp:required-namespace="http://www.hancom.co.kr/hwpml/2016/HwpUnitChar">
+            <hh:margin>
+              <hc:intent value="0" unit="HWPUNIT"/>
+              <hc:left value="400" unit="HWPUNIT"/>
+              <hc:right value="0" unit="HWPUNIT"/>
+              <hc:prev value="0" unit="HWPUNIT"/>
+              <hc:next value="0" unit="HWPUNIT"/>
+            </hh:margin>
+            <hh:lineSpacing type="PERCENT" value="160" unit="HWPUNIT"/>
+          </hp:case>
+          <hp:default>
+            <hh:margin>
+              <hc:intent value="0" unit="HWPUNIT"/>
+              <hc:left value="800" unit="HWPUNIT"/>
               <hc:right value="0" unit="HWPUNIT"/>
               <hc:prev value="0" unit="HWPUNIT"/>
               <hc:next value="0" unit="HWPUNIT"/>
