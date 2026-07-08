@@ -60,19 +60,20 @@ CHARPR = {
     8: (1400, 2, True,  "#000000"),   # 인라인 볼드 휴먼명조 14pt
 }
 
-# paraPr: id -> dict(align, left, intent, prev, next)
-#   왼쪽정렬 원칙: 첫째 줄과 줄바꿈된 줄이 같은 왼쪽 위치에서 시작 → intent=0
-#   (내어쓰기 없음). 레벨 들여쓰기는 left(왼쪽 여백)로만 준다. prev=문단 위 간격.
+# paraPr: id -> dict(align, left, intent, prev, next)   [case/HwpUnitChar 값]
+#   왼쪽정렬 + 내어쓰기(hanging): 첫 줄은 기호가 왼쪽으로 나오고, 줄바꿈된 줄은
+#   본문 텍스트 위치(left)에 맞춰 정렬. left=줄바꿈줄 기준, intent(음수)=첫줄 내어쓰기.
+#   검토본(reviedplan_v3) 실측값 반영. prev=문단 위 간격(1pt=100).
 PARAPR = {
-    0:  dict(align="LEFT",   left=0,    intent=0, prev=0,        nxt=0),  # 본문
-    1:  dict(align="CENTER", left=0,    intent=0, prev=0,        nxt=600),# 제목
-    2:  dict(align="LEFT",   left=0,    intent=0, prev=300,      nxt=0),  # □ 대항목
-    3:  dict(align="LEFT",   left=800,  intent=0, prev=GAP_O,    nxt=0),  # ㅇ 중항목 (□→ㅇ 5pt)
-    4:  dict(align="LEFT",   left=1400, intent=0, prev=GAP_DASH, nxt=0),  # - 세부 (ㅇ→- 3pt)
-    5:  dict(align="LEFT",   left=2000, intent=0, prev=0,        nxt=0),  # * 각주
-    6:  dict(align="LEFT",   left=800,  intent=0, prev=0,        nxt=0),  # ① 열거
-    7:  dict(align="CENTER", left=0,    intent=0, prev=0,        nxt=0),  # 표 헤더셀
-    8:  dict(align="LEFT",   left=0,    intent=0, prev=0,        nxt=0),  # 표 본문셀
+    0:  dict(align="LEFT",   left=0,    intent=0,     prev=0,        nxt=0),  # 본문
+    1:  dict(align="CENTER", left=0,    intent=0,     prev=0,        nxt=600),# 제목
+    2:  dict(align="LEFT",   left=0,    intent=0,     prev=300,      nxt=0),  # □ 대항목
+    3:  dict(align="LEFT",   left=800,  intent=-2100, prev=GAP_O,    nxt=0),  # ㅇ 중항목 (□→ㅇ 5pt)
+    4:  dict(align="LEFT",   left=1400, intent=-1400, prev=GAP_DASH, nxt=0),  # - 세부 (ㅇ→- 3pt)
+    5:  dict(align="LEFT",   left=2000, intent=-1400, prev=0,        nxt=0),  # * 각주
+    6:  dict(align="LEFT",   left=800,  intent=-2100, prev=GAP_O,    nxt=0),  # ① 열거
+    7:  dict(align="CENTER", left=0,    intent=0,     prev=0,        nxt=0),  # 표 헤더셀
+    8:  dict(align="LEFT",   left=0,    intent=0,     prev=0,        nxt=0),  # 표 본문셀
 }
 
 # ======================================================================
@@ -229,8 +230,8 @@ def _parapr(i, d) -> str:
             f'              <hc:intent value="{d["intent"]*mult}" unit="HWPUNIT"/>\n'
             f'              <hc:left value="{d["left"]*mult}" unit="HWPUNIT"/>\n'
             '              <hc:right value="0" unit="HWPUNIT"/>\n'
-            f'              <hc:prev value="{d["prev"]}" unit="HWPUNIT"/>\n'
-            f'              <hc:next value="{d["nxt"]}" unit="HWPUNIT"/>\n'
+            f'              <hc:prev value="{d["prev"]*mult}" unit="HWPUNIT"/>\n'
+            f'              <hc:next value="{d["nxt"]*mult}" unit="HWPUNIT"/>\n'
             '            </hh:margin>\n'
             f'            <hh:lineSpacing type="PERCENT" value="{LINE}" unit="HWPUNIT"/>'
         )
