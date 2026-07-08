@@ -35,7 +35,7 @@ from zipfile import ZIP_DEFLATED, ZIP_STORED, ZipFile
 # ======================================================================
 # STYLE SPEC (참조 문서에서 도출)
 # ======================================================================
-BODY_WIDTH = 42520          # A4 본문폭 (59528 - 8504*2)
+BODY_WIDTH = 48190          # A4 본문폭 (59528 - 5669*2, 좌우 20mm)
 LINE = 160                  # 기본 줄간격 %
 COLOR_DAEHANG = "#C00000"   # □ 대항목 색 (참조 문서의 색상 □ 반영, 조정 가능)
 COLOR_LABEL = "#1F4E79"     # (라벨) 강조색 (선택)
@@ -323,7 +323,7 @@ SEC_PR = (
     'border="SHOW_ALL" fill="SHOW_ALL" hideFirstPageNum="0" hideFirstEmptyLine="0" showLineNumber="0"/>\n'
     '        <hp:lineNumberShape restartType="0" countBy="0" distance="0" startNumber="0"/>\n'
     '        <hp:pagePr landscape="WIDELY" width="59528" height="84186" gutterType="LEFT_ONLY">\n'
-    '          <hp:margin header="4252" footer="4252" gutter="0" left="8504" right="8504" top="5668" bottom="4252"/>\n'
+    '          <hp:margin header="2835" footer="2835" gutter="0" left="5669" right="5669" top="4252" bottom="2835"/>\n'
     '        </hp:pagePr>\n'
     '        <hp:footNotePr>\n'
     '          <hp:autoNumFormat type="DIGIT" userChar="" prefixChar="" suffixChar=")" supscript="0"/>\n'

@@ -30,7 +30,7 @@ sys.path.insert(0, str(SCRIPT_DIR))
 import build_hwpx  # noqa: E402  (build() 재사용)
 
 # --- 본문폭(HWPUNIT) ---
-BODY_WIDTH = 42520
+BODY_WIDTH = 48190
 
 # --- secPr 포함 첫 문단 (base/section0.xml 표준) ---
 SEC_OPEN = (
@@ -45,7 +45,7 @@ SEC_OPEN = (
     '        <hp:visibility hideFirstHeader="0" hideFirstFooter="0" hideFirstMasterPage="0" border="SHOW_ALL" fill="SHOW_ALL" hideFirstPageNum="0" hideFirstEmptyLine="0" showLineNumber="0"/>\n'
     '        <hp:lineNumberShape restartType="0" countBy="0" distance="0" startNumber="0"/>\n'
     '        <hp:pagePr landscape="WIDELY" width="59528" height="84186" gutterType="LEFT_ONLY">\n'
-    '          <hp:margin header="4252" footer="4252" gutter="0" left="8504" right="8504" top="5668" bottom="4252"/>\n'
+    '          <hp:margin header="2835" footer="2835" gutter="0" left="5669" right="5669" top="4252" bottom="2835"/>\n'
     '        </hp:pagePr>\n'
     '        <hp:footNotePr>\n'
     '          <hp:autoNumFormat type="DIGIT" userChar="" prefixChar="" suffixChar=")" supscript="0"/>\n'

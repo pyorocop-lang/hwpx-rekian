@@ -196,7 +196,7 @@ section0.xml의 첫 문단(`<hp:p>`)의 첫 런(`<hp:run>`)에 반드시 `<hp:se
             textFlow="BOTH_SIDES" lock="0" dropcapstyle="None" pageBreak="CELL"
             repeatHeader="0" rowCnt="행수" colCnt="열수" cellSpacing="0"
             borderFillIDRef="3" noAdjust="0">
-      <hp:sz width="42520" widthRelTo="ABSOLUTE" height="전체높이" heightRelTo="ABSOLUTE" protect="0"/>
+      <hp:sz width="48190" widthRelTo="ABSOLUTE" height="전체높이" heightRelTo="ABSOLUTE" protect="0"/>
       <hp:pos treatAsChar="1" affectLSpacing="0" flowWithText="1" allowOverlap="0"
               holdAnchorAndSO="0" vertRelTo="PARA" horzRelTo="COLUMN" vertAlign="TOP"
               horzAlign="LEFT" vertOffset="0" horzOffset="0"/>
@@ -225,11 +225,15 @@ section0.xml의 첫 문단(`<hp:p>`)의 첫 런(`<hp:run>`)에 반드시 `<hp:se
 
 ### 표 크기 계산
 
-- **A4 본문폭**: 42520 HWPUNIT = 59528(용지) - 8504×2(좌우여백)
-- **열 너비 합 = 본문폭** (42520)
-- 예: 3열 균등 → 14173 + 14173 + 14174 = 42520
-- 예: 2열 (라벨:내용 = 1:4) → 8504 + 34016 = 42520
+- **A4 본문폭**: 48190 HWPUNIT = 59528(용지) - 5669×2(좌우여백 20mm)
+- **열 너비 합 = 본문폭** (48190)
+- 예: 3열 균등 → 16063 + 16063 + 16064 = 48190
+- 예: 2열 (라벨:내용 = 1:4) → 9638 + 38552 = 48190
 - **행 높이**: 셀당 보통 2400~3600 HWPUNIT
+
+> **페이지 여백(편집용지)**: 위 15 / 아래 10 / 좌·우 20 / 머리말·꼬리말 10 / 제본 0 mm.
+> HWPUNIT: top 4252, bottom 2835, left/right 5669, header/footer 2835, gutter 0.
+> (이전 30mm 좌우여백·본문폭 42520에서 변경됨 — 모든 section0/생성기에 반영)
 
 ### ID 규칙
 
@@ -612,8 +616,8 @@ python3 "$SKILL_DIR/scripts/validate.py" result.hwpx
 | 1cm | 2835 | 센티미터 |
 | A4 폭 | 59528 | 210mm |
 | A4 높이 | 84186 | 297mm |
-| 좌우여백 | 8504 | 30mm |
-| 본문폭 | 42520 | 150mm (A4-좌우여백) |
+| 좌우여백 | 5669 | 20mm (기본) |
+| 본문폭 | 48190 | 170mm (A4-좌우여백 20mm) |
 
 <!-- 커스텀 추가 시작 -->
 ## HWP → HWPX 자동 변환

@@ -9,7 +9,7 @@
         <hp:visibility hideFirstHeader="0" hideFirstFooter="0" hideFirstMasterPage="0" border="SHOW_ALL" fill="SHOW_ALL" hideFirstPageNum="0" hideFirstEmptyLine="0" showLineNumber="0"/>
         <hp:lineNumberShape restartType="0" countBy="0" distance="0" startNumber="0"/>
         <hp:pagePr landscape="WIDELY" width="59528" height="84186" gutterType="LEFT_ONLY">
-          <hp:margin header="4252" footer="4252" gutter="0" left="8504" right="8504" top="5668" bottom="4252"/>
+          <hp:margin header="2835" footer="2835" gutter="0" left="5669" right="5669" top="4252" bottom="2835"/>
         </hp:pagePr>
         <hp:footNotePr>
           <hp:autoNumFormat type="DIGIT" userChar="" prefixChar="" suffixChar=")" supscript="0"/>
@@ -43,7 +43,7 @@
       <hp:t/>
     </hp:run>
     <hp:linesegarray>
-      <hp:lineseg textpos="0" vertpos="0" vertsize="1000" textheight="1000" baseline="850" spacing="600" horzpos="0" horzsize="42520" flags="393216"/>
+      <hp:lineseg textpos="0" vertpos="0" vertsize="1000" textheight="1000" baseline="850" spacing="600" horzpos="0" horzsize="48190" flags="393216"/>
     </hp:linesegarray>
   </hp:p>
   <!-- 2. Empty line -->
@@ -52,7 +52,7 @@
       <hp:t/>
     </hp:run>
     <hp:linesegarray>
-      <hp:lineseg textpos="0" vertpos="0" vertsize="1000" textheight="1000" baseline="850" spacing="600" horzpos="0" horzsize="42520" flags="393216"/>
+      <hp:lineseg textpos="0" vertpos="0" vertsize="1000" textheight="1000" baseline="850" spacing="600" horzpos="0" horzsize="48190" flags="393216"/>
     </hp:linesegarray>
   </hp:p>
   <!-- 3. Title -->
@@ -61,7 +61,7 @@
       <hp:t>{{회의록 제목}}</hp:t>
     </hp:run>
     <hp:linesegarray>
-      <hp:lineseg textpos="0" vertpos="0" vertsize="1800" textheight="1800" baseline="1530" spacing="1080" horzpos="0" horzsize="42520" flags="393216"/>
+      <hp:lineseg textpos="0" vertpos="0" vertsize="1800" textheight="1800" baseline="1530" spacing="1080" horzpos="0" horzsize="48190" flags="393216"/>
     </hp:linesegarray>
   </hp:p>
   <!-- 4. Empty line -->
@@ -70,14 +70,14 @@
       <hp:t/>
     </hp:run>
     <hp:linesegarray>
-      <hp:lineseg textpos="0" vertpos="0" vertsize="1000" textheight="1000" baseline="850" spacing="600" horzpos="0" horzsize="42520" flags="393216"/>
+      <hp:lineseg textpos="0" vertpos="0" vertsize="1000" textheight="1000" baseline="850" spacing="600" horzpos="0" horzsize="48190" flags="393216"/>
     </hp:linesegarray>
   </hp:p>
   <!-- 5. Metadata table -->
   <hp:p id="1000000005" paraPrIDRef="0" styleIDRef="0" pageBreak="0" columnBreak="0" merged="0">
     <hp:run charPrIDRef="0">
       <hp:tbl id="1000000099" zOrder="0" numberingType="TABLE" textWrap="TOP_AND_BOTTOM" textFlow="BOTH_SIDES" lock="0" dropcapstyle="None" pageBreak="CELL" repeatHeader="0" cellSpacing="0" borderFillIDRef="3" noAdjust="0">
-        <hp:sz width="42520" widthRelTo="ABSOLUTE" height="9600" heightRelTo="ABSOLUTE" protect="0"/>
+        <hp:sz width="48190" widthRelTo="ABSOLUTE" height="9600" heightRelTo="ABSOLUTE" protect="0"/>
         <hp:pos treatAsChar="1" affectLSpacing="0" flowWithText="1" allowOverlap="0" holdAnchorAndSO="0" vertRelTo="PARA" horzRelTo="COLUMN" vertAlign="TOP" horzAlign="LEFT" vertOffset="0" horzOffset="0"/>
         <hp:outMargin left="0" right="0" top="0" bottom="0"/>
         <hp:inMargin left="0" right="0" top="0" bottom="0"/>
@@ -86,7 +86,7 @@
           <hp:tc borderFillIDRef="4">
             <hp:cellAddr colAddr="0" rowAddr="0"/>
             <hp:cellSpan colSpan="1" rowSpan="1"/>
-            <hp:cellSz width="8504" height="2400"/>
+            <hp:cellSz width="9638" height="2400"/>
             <hp:cellMargin left="283" right="283" top="141" bottom="141"/>
             <hp:subList id="" textDirection="HORIZONTAL" lineWrap="BREAK" vertAlign="CENTER" linkListIDRef="0" linkListNextIDRef="0" textWidth="7938" fieldName="">
               <hp:p id="1000000010" paraPrIDRef="21" styleIDRef="0" pageBreak="0" columnBreak="0" merged="0">
@@ -102,7 +102,7 @@
           <hp:tc borderFillIDRef="3">
             <hp:cellAddr colAddr="1" rowAddr="0"/>
             <hp:cellSpan colSpan="1" rowSpan="1"/>
-            <hp:cellSz width="34016" height="2400"/>
+            <hp:cellSz width="38552" height="2400"/>
             <hp:cellMargin left="283" right="283" top="141" bottom="141"/>
             <hp:subList id="" textDirection="HORIZONTAL" lineWrap="BREAK" vertAlign="CENTER" linkListIDRef="0" linkListNextIDRef="0" textWidth="33450" fieldName="">
               <hp:p id="1000000011" paraPrIDRef="22" styleIDRef="0" pageBreak="0" columnBreak="0" merged="0">
@@ -121,7 +121,7 @@
           <hp:tc borderFillIDRef="4">
             <hp:cellAddr colAddr="0" rowAddr="1"/>
             <hp:cellSpan colSpan="1" rowSpan="1"/>
-            <hp:cellSz width="8504" height="2400"/>
+            <hp:cellSz width="9638" height="2400"/>
             <hp:cellMargin left="283" right="283" top="141" bottom="141"/>
             <hp:subList id="" textDirection="HORIZONTAL" lineWrap="BREAK" vertAlign="CENTER" linkListIDRef="0" linkListNextIDRef="0" textWidth="7938" fieldName="">
               <hp:p id="1000000012" paraPrIDRef="21" styleIDRef="0" pageBreak="0" columnBreak="0" merged="0">
@@ -137,7 +137,7 @@
           <hp:tc borderFillIDRef="3">
             <hp:cellAddr colAddr="1" rowAddr="1"/>
             <hp:cellSpan colSpan="1" rowSpan="1"/>
-            <hp:cellSz width="34016" height="2400"/>
+            <hp:cellSz width="38552" height="2400"/>
             <hp:cellMargin left="283" right="283" top="141" bottom="141"/>
             <hp:subList id="" textDirection="HORIZONTAL" lineWrap="BREAK" vertAlign="CENTER" linkListIDRef="0" linkListNextIDRef="0" textWidth="33450" fieldName="">
               <hp:p id="1000000013" paraPrIDRef="22" styleIDRef="0" pageBreak="0" columnBreak="0" merged="0">
@@ -156,7 +156,7 @@
           <hp:tc borderFillIDRef="4">
             <hp:cellAddr colAddr="0" rowAddr="2"/>
             <hp:cellSpan colSpan="1" rowSpan="1"/>
-            <hp:cellSz width="8504" height="2400"/>
+            <hp:cellSz width="9638" height="2400"/>
             <hp:cellMargin left="283" right="283" top="141" bottom="141"/>
             <hp:subList id="" textDirection="HORIZONTAL" lineWrap="BREAK" vertAlign="CENTER" linkListIDRef="0" linkListNextIDRef="0" textWidth="7938" fieldName="">
               <hp:p id="1000000014" paraPrIDRef="21" styleIDRef="0" pageBreak="0" columnBreak="0" merged="0">
@@ -172,7 +172,7 @@
           <hp:tc borderFillIDRef="3">
             <hp:cellAddr colAddr="1" rowAddr="2"/>
             <hp:cellSpan colSpan="1" rowSpan="1"/>
-            <hp:cellSz width="34016" height="2400"/>
+            <hp:cellSz width="38552" height="2400"/>
             <hp:cellMargin left="283" right="283" top="141" bottom="141"/>
             <hp:subList id="" textDirection="HORIZONTAL" lineWrap="BREAK" vertAlign="CENTER" linkListIDRef="0" linkListNextIDRef="0" textWidth="33450" fieldName="">
               <hp:p id="1000000015" paraPrIDRef="22" styleIDRef="0" pageBreak="0" columnBreak="0" merged="0">
@@ -191,7 +191,7 @@
           <hp:tc borderFillIDRef="4">
             <hp:cellAddr colAddr="0" rowAddr="3"/>
             <hp:cellSpan colSpan="1" rowSpan="1"/>
-            <hp:cellSz width="8504" height="2400"/>
+            <hp:cellSz width="9638" height="2400"/>
             <hp:cellMargin left="283" right="283" top="141" bottom="141"/>
             <hp:subList id="" textDirection="HORIZONTAL" lineWrap="BREAK" vertAlign="CENTER" linkListIDRef="0" linkListNextIDRef="0" textWidth="7938" fieldName="">
               <hp:p id="1000000016" paraPrIDRef="21" styleIDRef="0" pageBreak="0" columnBreak="0" merged="0">
@@ -207,7 +207,7 @@
           <hp:tc borderFillIDRef="3">
             <hp:cellAddr colAddr="1" rowAddr="3"/>
             <hp:cellSpan colSpan="1" rowSpan="1"/>
-            <hp:cellSz width="34016" height="2400"/>
+            <hp:cellSz width="38552" height="2400"/>
             <hp:cellMargin left="283" right="283" top="141" bottom="141"/>
             <hp:subList id="" textDirection="HORIZONTAL" lineWrap="BREAK" vertAlign="CENTER" linkListIDRef="0" linkListNextIDRef="0" textWidth="33450" fieldName="">
               <hp:p id="1000000017" paraPrIDRef="22" styleIDRef="0" pageBreak="0" columnBreak="0" merged="0">
@@ -224,7 +224,7 @@
       </hp:tbl>
     </hp:run>
     <hp:linesegarray>
-      <hp:lineseg textpos="0" vertpos="0" vertsize="1000" textheight="1000" baseline="850" spacing="600" horzpos="0" horzsize="42520" flags="393216"/>
+      <hp:lineseg textpos="0" vertpos="0" vertsize="1000" textheight="1000" baseline="850" spacing="600" horzpos="0" horzsize="48190" flags="393216"/>
     </hp:linesegarray>
   </hp:p>
   <!-- 6. Empty line x2 -->
@@ -233,7 +233,7 @@
       <hp:t/>
     </hp:run>
     <hp:linesegarray>
-      <hp:lineseg textpos="0" vertpos="0" vertsize="1000" textheight="1000" baseline="850" spacing="600" horzpos="0" horzsize="42520" flags="393216"/>
+      <hp:lineseg textpos="0" vertpos="0" vertsize="1000" textheight="1000" baseline="850" spacing="600" horzpos="0" horzsize="48190" flags="393216"/>
     </hp:linesegarray>
   </hp:p>
   <hp:p id="1000000007" paraPrIDRef="0" styleIDRef="0" pageBreak="0" columnBreak="0" merged="0">
@@ -241,7 +241,7 @@
       <hp:t/>
     </hp:run>
     <hp:linesegarray>
-      <hp:lineseg textpos="0" vertpos="0" vertsize="1000" textheight="1000" baseline="850" spacing="600" horzpos="0" horzsize="42520" flags="393216"/>
+      <hp:lineseg textpos="0" vertpos="0" vertsize="1000" textheight="1000" baseline="850" spacing="600" horzpos="0" horzsize="48190" flags="393216"/>
     </hp:linesegarray>
   </hp:p>
   <!-- 7. Section label: 안건 -->
@@ -250,7 +250,7 @@
       <hp:t>안건</hp:t>
     </hp:run>
     <hp:linesegarray>
-      <hp:lineseg textpos="0" vertpos="0" vertsize="1200" textheight="1200" baseline="1020" spacing="720" horzpos="0" horzsize="42520" flags="393216"/>
+      <hp:lineseg textpos="0" vertpos="0" vertsize="1200" textheight="1200" baseline="1020" spacing="720" horzpos="0" horzsize="48190" flags="393216"/>
     </hp:linesegarray>
   </hp:p>
   <!-- 8. 안건 내용 -->
@@ -259,7 +259,7 @@
       <hp:t>{{안건 내용}}</hp:t>
     </hp:run>
     <hp:linesegarray>
-      <hp:lineseg textpos="0" vertpos="0" vertsize="1000" textheight="1000" baseline="850" spacing="600" horzpos="0" horzsize="42520" flags="393216"/>
+      <hp:lineseg textpos="0" vertpos="0" vertsize="1000" textheight="1000" baseline="850" spacing="600" horzpos="0" horzsize="48190" flags="393216"/>
     </hp:linesegarray>
   </hp:p>
   <!-- 9. Empty line -->
@@ -268,7 +268,7 @@
       <hp:t/>
     </hp:run>
     <hp:linesegarray>
-      <hp:lineseg textpos="0" vertpos="0" vertsize="1000" textheight="1000" baseline="850" spacing="600" horzpos="0" horzsize="42520" flags="393216"/>
+      <hp:lineseg textpos="0" vertpos="0" vertsize="1000" textheight="1000" baseline="850" spacing="600" horzpos="0" horzsize="48190" flags="393216"/>
     </hp:linesegarray>
   </hp:p>
   <!-- 10. Section label: 논의 내용 -->
@@ -277,7 +277,7 @@
       <hp:t>논의 내용</hp:t>
     </hp:run>
     <hp:linesegarray>
-      <hp:lineseg textpos="0" vertpos="0" vertsize="1200" textheight="1200" baseline="1020" spacing="720" horzpos="0" horzsize="42520" flags="393216"/>
+      <hp:lineseg textpos="0" vertpos="0" vertsize="1200" textheight="1200" baseline="1020" spacing="720" horzpos="0" horzsize="48190" flags="393216"/>
     </hp:linesegarray>
   </hp:p>
   <!-- 11. 논의 내용 -->
@@ -286,7 +286,7 @@
       <hp:t>{{논의 내용}}</hp:t>
     </hp:run>
     <hp:linesegarray>
-      <hp:lineseg textpos="0" vertpos="0" vertsize="1000" textheight="1000" baseline="850" spacing="600" horzpos="0" horzsize="42520" flags="393216"/>
+      <hp:lineseg textpos="0" vertpos="0" vertsize="1000" textheight="1000" baseline="850" spacing="600" horzpos="0" horzsize="48190" flags="393216"/>
     </hp:linesegarray>
   </hp:p>
   <!-- 12. Empty line -->
@@ -295,7 +295,7 @@
       <hp:t/>
     </hp:run>
     <hp:linesegarray>
-      <hp:lineseg textpos="0" vertpos="0" vertsize="1000" textheight="1000" baseline="850" spacing="600" horzpos="0" horzsize="42520" flags="393216"/>
+      <hp:lineseg textpos="0" vertpos="0" vertsize="1000" textheight="1000" baseline="850" spacing="600" horzpos="0" horzsize="48190" flags="393216"/>
     </hp:linesegarray>
   </hp:p>
   <!-- 13. Section label: 결정 사항 -->
@@ -304,7 +304,7 @@
       <hp:t>결정 사항</hp:t>
     </hp:run>
     <hp:linesegarray>
-      <hp:lineseg textpos="0" vertpos="0" vertsize="1200" textheight="1200" baseline="1020" spacing="720" horzpos="0" horzsize="42520" flags="393216"/>
+      <hp:lineseg textpos="0" vertpos="0" vertsize="1200" textheight="1200" baseline="1020" spacing="720" horzpos="0" horzsize="48190" flags="393216"/>
     </hp:linesegarray>
   </hp:p>
   <!-- 14. 결정 사항 -->
@@ -313,7 +313,7 @@
       <hp:t>{{결정 사항}}</hp:t>
     </hp:run>
     <hp:linesegarray>
-      <hp:lineseg textpos="0" vertpos="0" vertsize="1000" textheight="1000" baseline="850" spacing="600" horzpos="0" horzsize="42520" flags="393216"/>
+      <hp:lineseg textpos="0" vertpos="0" vertsize="1000" textheight="1000" baseline="850" spacing="600" horzpos="0" horzsize="48190" flags="393216"/>
     </hp:linesegarray>
   </hp:p>
   <!-- 15. Empty line -->
@@ -322,7 +322,7 @@
       <hp:t/>
     </hp:run>
     <hp:linesegarray>
-      <hp:lineseg textpos="0" vertpos="0" vertsize="1000" textheight="1000" baseline="850" spacing="600" horzpos="0" horzsize="42520" flags="393216"/>
+      <hp:lineseg textpos="0" vertpos="0" vertsize="1000" textheight="1000" baseline="850" spacing="600" horzpos="0" horzsize="48190" flags="393216"/>
     </hp:linesegarray>
   </hp:p>
   <!-- 16. Section label: 향후 조치 -->
@@ -331,7 +331,7 @@
       <hp:t>향후 조치</hp:t>
     </hp:run>
     <hp:linesegarray>
-      <hp:lineseg textpos="0" vertpos="0" vertsize="1200" textheight="1200" baseline="1020" spacing="720" horzpos="0" horzsize="42520" flags="393216"/>
+      <hp:lineseg textpos="0" vertpos="0" vertsize="1200" textheight="1200" baseline="1020" spacing="720" horzpos="0" horzsize="48190" flags="393216"/>
     </hp:linesegarray>
   </hp:p>
   <!-- 17. 향후 조치 사항 -->
@@ -340,7 +340,7 @@
       <hp:t>{{향후 조치 사항}}</hp:t>
     </hp:run>
     <hp:linesegarray>
-      <hp:lineseg textpos="0" vertpos="0" vertsize="1000" textheight="1000" baseline="850" spacing="600" horzpos="0" horzsize="42520" flags="393216"/>
+      <hp:lineseg textpos="0" vertpos="0" vertsize="1000" textheight="1000" baseline="850" spacing="600" horzpos="0" horzsize="48190" flags="393216"/>
     </hp:linesegarray>
   </hp:p>
 </hs:sec>

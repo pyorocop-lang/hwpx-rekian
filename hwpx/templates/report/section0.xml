@@ -9,7 +9,7 @@
         <hp:visibility hideFirstHeader="0" hideFirstFooter="0" hideFirstMasterPage="0" border="SHOW_ALL" fill="SHOW_ALL" hideFirstPageNum="0" hideFirstEmptyLine="0" showLineNumber="0"/>
         <hp:lineNumberShape restartType="0" countBy="0" distance="0" startNumber="0"/>
         <hp:pagePr landscape="WIDELY" width="59528" height="84186" gutterType="LEFT_ONLY">
-          <hp:margin header="4252" footer="4252" gutter="0" left="8504" right="8504" top="5668" bottom="4252"/>
+          <hp:margin header="2835" footer="2835" gutter="0" left="5669" right="5669" top="4252" bottom="2835"/>
         </hp:pagePr>
         <hp:footNotePr>
           <hp:autoNumFormat type="DIGIT" userChar="" prefixChar="" suffixChar=")" supscript="0"/>
@@ -43,7 +43,7 @@
       <hp:t/>
     </hp:run>
     <hp:linesegarray>
-      <hp:lineseg textpos="0" vertpos="0" vertsize="1000" textheight="1000" baseline="850" spacing="600" horzpos="0" horzsize="42520" flags="393216"/>
+      <hp:lineseg textpos="0" vertpos="0" vertsize="1000" textheight="1000" baseline="850" spacing="600" horzpos="0" horzsize="48190" flags="393216"/>
     </hp:linesegarray>
   </hp:p>
   <!-- 2. Empty line -->
@@ -52,7 +52,7 @@
       <hp:t/>
     </hp:run>
     <hp:linesegarray>
-      <hp:lineseg textpos="0" vertpos="0" vertsize="1000" textheight="1000" baseline="850" spacing="600" horzpos="0" horzsize="42520" flags="393216"/>
+      <hp:lineseg textpos="0" vertpos="0" vertsize="1000" textheight="1000" baseline="850" spacing="600" horzpos="0" horzsize="48190" flags="393216"/>
     </hp:linesegarray>
   </hp:p>
   <!-- 3. Title -->
@@ -61,7 +61,7 @@
       <hp:t>{{보고서 제목}}</hp:t>
     </hp:run>
     <hp:linesegarray>
-      <hp:lineseg textpos="0" vertpos="0" vertsize="2000" textheight="2000" baseline="1700" spacing="1200" horzpos="0" horzsize="42520" flags="393216"/>
+      <hp:lineseg textpos="0" vertpos="0" vertsize="2000" textheight="2000" baseline="1700" spacing="1200" horzpos="0" horzsize="48190" flags="393216"/>
     </hp:linesegarray>
   </hp:p>
   <!-- 4. Empty line -->
@@ -70,7 +70,7 @@
       <hp:t/>
     </hp:run>
     <hp:linesegarray>
-      <hp:lineseg textpos="0" vertpos="0" vertsize="1000" textheight="1000" baseline="850" spacing="600" horzpos="0" horzsize="42520" flags="393216"/>
+      <hp:lineseg textpos="0" vertpos="0" vertsize="1000" textheight="1000" baseline="850" spacing="600" horzpos="0" horzsize="48190" flags="393216"/>
     </hp:linesegarray>
   </hp:p>
   <!-- 5. Date -->
@@ -79,7 +79,7 @@
       <hp:t>{{작성일: YYYY년 MM월 DD일}}</hp:t>
     </hp:run>
     <hp:linesegarray>
-      <hp:lineseg textpos="0" vertpos="0" vertsize="1000" textheight="1000" baseline="850" spacing="600" horzpos="0" horzsize="42520" flags="393216"/>
+      <hp:lineseg textpos="0" vertpos="0" vertsize="1000" textheight="1000" baseline="850" spacing="600" horzpos="0" horzsize="48190" flags="393216"/>
     </hp:linesegarray>
   </hp:p>
   <!-- 6. Author -->
@@ -88,7 +88,7 @@
       <hp:t>{{작성자/부서}}</hp:t>
     </hp:run>
     <hp:linesegarray>
-      <hp:lineseg textpos="0" vertpos="0" vertsize="1000" textheight="1000" baseline="850" spacing="600" horzpos="0" horzsize="42520" flags="393216"/>
+      <hp:lineseg textpos="0" vertpos="0" vertsize="1000" textheight="1000" baseline="850" spacing="600" horzpos="0" horzsize="48190" flags="393216"/>
     </hp:linesegarray>
   </hp:p>
   <!-- 7. Empty line x2 -->
@@ -97,7 +97,7 @@
       <hp:t/>
     </hp:run>
     <hp:linesegarray>
-      <hp:lineseg textpos="0" vertpos="0" vertsize="1000" textheight="1000" baseline="850" spacing="600" horzpos="0" horzsize="42520" flags="393216"/>
+      <hp:lineseg textpos="0" vertpos="0" vertsize="1000" textheight="1000" baseline="850" spacing="600" horzpos="0" horzsize="48190" flags="393216"/>
     </hp:linesegarray>
   </hp:p>
   <hp:p id="1000000008" paraPrIDRef="0" styleIDRef="0" pageBreak="0" columnBreak="0" merged="0">
@@ -105,7 +105,7 @@
       <hp:t/>
     </hp:run>
     <hp:linesegarray>
-      <hp:lineseg textpos="0" vertpos="0" vertsize="1000" textheight="1000" baseline="850" spacing="600" horzpos="0" horzsize="42520" flags="393216"/>
+      <hp:lineseg textpos="0" vertpos="0" vertsize="1000" textheight="1000" baseline="850" spacing="600" horzpos="0" horzsize="48190" flags="393216"/>
     </hp:linesegarray>
   </hp:p>
   <!-- 8. Section heading 1 -->
@@ -114,7 +114,7 @@
       <hp:t>1. {{섹션 제목}}</hp:t>
     </hp:run>
     <hp:linesegarray>
-      <hp:lineseg textpos="0" vertpos="0" vertsize="1400" textheight="1400" baseline="1190" spacing="840" horzpos="0" horzsize="42520" flags="393216"/>
+      <hp:lineseg textpos="0" vertpos="0" vertsize="1400" textheight="1400" baseline="1190" spacing="840" horzpos="0" horzsize="48190" flags="393216"/>
     </hp:linesegarray>
   </hp:p>
   <!-- 9. Body -->
@@ -123,7 +123,7 @@
       <hp:t>{{본문 내용}}</hp:t>
     </hp:run>
     <hp:linesegarray>
-      <hp:lineseg textpos="0" vertpos="0" vertsize="1000" textheight="1000" baseline="850" spacing="600" horzpos="0" horzsize="42520" flags="393216"/>
+      <hp:lineseg textpos="0" vertpos="0" vertsize="1000" textheight="1000" baseline="850" spacing="600" horzpos="0" horzsize="48190" flags="393216"/>
     </hp:linesegarray>
   </hp:p>
   <!-- 10. Empty line -->
@@ -132,7 +132,7 @@
       <hp:t/>
     </hp:run>
     <hp:linesegarray>
-      <hp:lineseg textpos="0" vertpos="0" vertsize="1000" textheight="1000" baseline="850" spacing="600" horzpos="0" horzsize="42520" flags="393216"/>
+      <hp:lineseg textpos="0" vertpos="0" vertsize="1000" textheight="1000" baseline="850" spacing="600" horzpos="0" horzsize="48190" flags="393216"/>
     </hp:linesegarray>
   </hp:p>
   <!-- 11. Section heading 2 -->
@@ -141,7 +141,7 @@
       <hp:t>2. {{섹션 제목}}</hp:t>
     </hp:run>
     <hp:linesegarray>
-      <hp:lineseg textpos="0" vertpos="0" vertsize="1400" textheight="1400" baseline="1190" spacing="840" horzpos="0" horzsize="42520" flags="393216"/>
+      <hp:lineseg textpos="0" vertpos="0" vertsize="1400" textheight="1400" baseline="1190" spacing="840" horzpos="0" horzsize="48190" flags="393216"/>
     </hp:linesegarray>
   </hp:p>
   <!-- 12. Body -->
@@ -150,7 +150,7 @@
       <hp:t>{{본문 내용}}</hp:t>
     </hp:run>
     <hp:linesegarray>
-      <hp:lineseg textpos="0" vertpos="0" vertsize="1000" textheight="1000" baseline="850" spacing="600" horzpos="0" horzsize="42520" flags="393216"/>
+      <hp:lineseg textpos="0" vertpos="0" vertsize="1000" textheight="1000" baseline="850" spacing="600" horzpos="0" horzsize="48190" flags="393216"/>
     </hp:linesegarray>
   </hp:p>
   <!-- 13. Empty line -->
@@ -159,7 +159,7 @@
       <hp:t/>
     </hp:run>
     <hp:linesegarray>
-      <hp:lineseg textpos="0" vertpos="0" vertsize="1000" textheight="1000" baseline="850" spacing="600" horzpos="0" horzsize="42520" flags="393216"/>
+      <hp:lineseg textpos="0" vertpos="0" vertsize="1000" textheight="1000" baseline="850" spacing="600" horzpos="0" horzsize="48190" flags="393216"/>
     </hp:linesegarray>
   </hp:p>
   <!-- 14. Table placeholder -->
@@ -168,7 +168,7 @@
       <hp:t>{{표 삽입 위치}}</hp:t>
     </hp:run>
     <hp:linesegarray>
-      <hp:lineseg textpos="0" vertpos="0" vertsize="1000" textheight="1000" baseline="850" spacing="600" horzpos="0" horzsize="42520" flags="393216"/>
+      <hp:lineseg textpos="0" vertpos="0" vertsize="1000" textheight="1000" baseline="850" spacing="600" horzpos="0" horzsize="48190" flags="393216"/>
     </hp:linesegarray>
   </hp:p>
   <!-- 15. Empty line -->
@@ -177,7 +177,7 @@
       <hp:t/>
     </hp:run>
     <hp:linesegarray>
-      <hp:lineseg textpos="0" vertpos="0" vertsize="1000" textheight="1000" baseline="850" spacing="600" horzpos="0" horzsize="42520" flags="393216"/>
+      <hp:lineseg textpos="0" vertpos="0" vertsize="1000" textheight="1000" baseline="850" spacing="600" horzpos="0" horzsize="48190" flags="393216"/>
     </hp:linesegarray>
   </hp:p>
   <!-- 16. Section heading 3 -->
@@ -186,7 +186,7 @@
       <hp:t>3. {{결론}}</hp:t>
     </hp:run>
     <hp:linesegarray>
-      <hp:lineseg textpos="0" vertpos="0" vertsize="1400" textheight="1400" baseline="1190" spacing="840" horzpos="0" horzsize="42520" flags="393216"/>
+      <hp:lineseg textpos="0" vertpos="0" vertsize="1400" textheight="1400" baseline="1190" spacing="840" horzpos="0" horzsize="48190" flags="393216"/>
     </hp:linesegarray>
   </hp:p>
   <!-- 17. Conclusion body -->
@@ -195,7 +195,7 @@
       <hp:t>{{결론 내용}}</hp:t>
     </hp:run>
     <hp:linesegarray>
-      <hp:lineseg textpos="0" vertpos="0" vertsize="1000" textheight="1000" baseline="850" spacing="600" horzpos="0" horzsize="42520" flags="393216"/>
+      <hp:lineseg textpos="0" vertpos="0" vertsize="1000" textheight="1000" baseline="850" spacing="600" horzpos="0" horzsize="48190" flags="393216"/>
     </hp:linesegarray>
   </hp:p>
 </hs:sec>
