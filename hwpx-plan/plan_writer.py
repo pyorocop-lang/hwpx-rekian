@@ -6,9 +6,9 @@ HWPX 패키지 전체(mimetype, META-INF, version, settings, content.hpf, header
 section0.xml, Preview)를 이 스크립트가 직접 생성한다.
 
 스타일(계층/글씨크기/문단간격)은 정부 기구설치·업무추진계획 문서에서 도출:
-  - 본문 기본 15pt 함초롬바탕, 줄간격 160%
-  - 제목 16pt 볼드, □ 대항목 15pt 볼드 색상, ㅇ/-/① 하위는 내어쓰기(hanging)
-  - 항목 계층: 제목 → □ 대항목 → ㅇ 중항목 → - 세부 → ①②③ 열거 → * 각주
+  - 본문 14pt 휴먼명조, 줄간격 160%, 모든 문단 왼쪽정렬+내어쓰기
+  - □ 대항목 HY헤드라인M 15pt, ㅇ/- 휴먼명조 14pt (내어쓰기)
+  - 문단 간격: □→ㅇ 5pt, ㅇ→- 3pt (빈 줄이 아닌 문단 위 간격으로 구현)
 
 입력: 아래 마커로 시작하는 아웃라인 텍스트(.txt/.md)
   # 제목            → 문서 제목
@@ -63,15 +63,15 @@ CHARPR = {
 # paraPr: id -> dict(align, left, intent(음수=내어쓰기), prev, next, border)
 #   실제 왼쪽여백=left, 첫줄=left+intent. HWPUNIT. prev=문단 위 간격.
 PARAPR = {
-    0:  dict(align="JUSTIFY", left=0,    intent=0,    prev=0,       nxt=0),  # 본문
+    0:  dict(align="LEFT"   , left=0,    intent=0,    prev=0,       nxt=0),  # 본문
     1:  dict(align="CENTER",  left=0,    intent=0,    prev=0,       nxt=600),# 제목
     2:  dict(align="LEFT",    left=600,  intent=-600, prev=300,     nxt=0),  # □ 대항목
-    3:  dict(align="JUSTIFY", left=1400, intent=-600, prev=GAP_O,   nxt=0),  # ㅇ 중항목 (□→ㅇ 5pt)
-    4:  dict(align="JUSTIFY", left=2000, intent=-600, prev=GAP_DASH,nxt=0),  # - 세부 (ㅇ→- 3pt)
-    5:  dict(align="JUSTIFY", left=2600, intent=-600, prev=0,       nxt=0),  # * 각주
-    6:  dict(align="JUSTIFY", left=1400, intent=-700, prev=0,       nxt=0),  # ① 열거
+    3:  dict(align="LEFT"   , left=1400, intent=-600, prev=GAP_O,   nxt=0),  # ㅇ 중항목 (□→ㅇ 5pt)
+    4:  dict(align="LEFT"   , left=2000, intent=-600, prev=GAP_DASH,nxt=0),  # - 세부 (ㅇ→- 3pt)
+    5:  dict(align="LEFT"   , left=2600, intent=-600, prev=0,       nxt=0),  # * 각주
+    6:  dict(align="LEFT"   , left=1400, intent=-700, prev=0,       nxt=0),  # ① 열거
     7:  dict(align="CENTER",  left=0,    intent=0,    prev=0,       nxt=0),  # 표 헤더셀
-    8:  dict(align="JUSTIFY", left=0,    intent=0,    prev=0,       nxt=0),  # 표 본문셀
+    8:  dict(align="LEFT"   , left=0,    intent=0,    prev=0,       nxt=0),  # 표 본문셀
 }
 
 # ======================================================================
