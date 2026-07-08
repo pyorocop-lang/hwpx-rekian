@@ -72,10 +72,10 @@ PARAPR = {
     0:  dict(align="JUSTIFY",   left=0,    intent=0,     prev=0,        nxt=0),  # 본문
     1:  dict(align="CENTER", left=0,    intent=0,     prev=0,        nxt=600),# 제목
     2:  dict(align="JUSTIFY",   left=0,    intent=0,     prev=300,      nxt=0),  # □ 대항목
-    3:  dict(align="JUSTIFY",   left=800,  intent=-2100, prev=GAP_O,    nxt=0),  # ㅇ 중항목 (□→ㅇ 5pt)
+    3:  dict(align="JUSTIFY",   left=800,  intent=-800,  prev=GAP_O,    nxt=0),  # ㅇ 중항목 (□→ㅇ 5pt) 내어쓰기=좌여백(정형)
     4:  dict(align="JUSTIFY",   left=1400, intent=-1400, prev=GAP_DASH, nxt=0),  # - 세부 (ㅇ→- 3pt)
-    5:  dict(align="JUSTIFY",   left=2000, intent=-1400, prev=0,        nxt=0),  # * 각주
-    6:  dict(align="JUSTIFY",   left=800,  intent=-2100, prev=GAP_O,    nxt=0),  # ① 열거
+    5:  dict(align="JUSTIFY",   left=2000, intent=-2000, prev=0,        nxt=0),  # * 각주
+    6:  dict(align="JUSTIFY",   left=800,  intent=-800,  prev=GAP_O,    nxt=0),  # ① 열거
     7:  dict(align="CENTER", left=0,    intent=0,     prev=0,        nxt=0),  # 표 헤더셀
     8:  dict(align="JUSTIFY",   left=0,    intent=0,     prev=0,        nxt=0),  # 표 본문셀
 }
