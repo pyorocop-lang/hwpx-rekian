@@ -60,18 +60,19 @@ CHARPR = {
     8: (1400, 2, True,  "#000000"),   # 인라인 볼드 휴먼명조 14pt
 }
 
-# paraPr: id -> dict(align, left, intent(음수=내어쓰기), prev, next, border)
-#   실제 왼쪽여백=left, 첫줄=left+intent. HWPUNIT. prev=문단 위 간격.
+# paraPr: id -> dict(align, left, intent, prev, next)
+#   왼쪽정렬 원칙: 첫째 줄과 줄바꿈된 줄이 같은 왼쪽 위치에서 시작 → intent=0
+#   (내어쓰기 없음). 레벨 들여쓰기는 left(왼쪽 여백)로만 준다. prev=문단 위 간격.
 PARAPR = {
-    0:  dict(align="LEFT"   , left=0,    intent=0,    prev=0,       nxt=0),  # 본문
-    1:  dict(align="CENTER",  left=0,    intent=0,    prev=0,       nxt=600),# 제목
-    2:  dict(align="LEFT",    left=600,  intent=-600, prev=300,     nxt=0),  # □ 대항목
-    3:  dict(align="LEFT"   , left=1400, intent=-600, prev=GAP_O,   nxt=0),  # ㅇ 중항목 (□→ㅇ 5pt)
-    4:  dict(align="LEFT"   , left=2000, intent=-600, prev=GAP_DASH,nxt=0),  # - 세부 (ㅇ→- 3pt)
-    5:  dict(align="LEFT"   , left=2600, intent=-600, prev=0,       nxt=0),  # * 각주
-    6:  dict(align="LEFT"   , left=1400, intent=-700, prev=0,       nxt=0),  # ① 열거
-    7:  dict(align="CENTER",  left=0,    intent=0,    prev=0,       nxt=0),  # 표 헤더셀
-    8:  dict(align="LEFT"   , left=0,    intent=0,    prev=0,       nxt=0),  # 표 본문셀
+    0:  dict(align="LEFT",   left=0,    intent=0, prev=0,        nxt=0),  # 본문
+    1:  dict(align="CENTER", left=0,    intent=0, prev=0,        nxt=600),# 제목
+    2:  dict(align="LEFT",   left=0,    intent=0, prev=300,      nxt=0),  # □ 대항목
+    3:  dict(align="LEFT",   left=800,  intent=0, prev=GAP_O,    nxt=0),  # ㅇ 중항목 (□→ㅇ 5pt)
+    4:  dict(align="LEFT",   left=1400, intent=0, prev=GAP_DASH, nxt=0),  # - 세부 (ㅇ→- 3pt)
+    5:  dict(align="LEFT",   left=2000, intent=0, prev=0,        nxt=0),  # * 각주
+    6:  dict(align="LEFT",   left=800,  intent=0, prev=0,        nxt=0),  # ① 열거
+    7:  dict(align="CENTER", left=0,    intent=0, prev=0,        nxt=0),  # 표 헤더셀
+    8:  dict(align="LEFT",   left=0,    intent=0, prev=0,        nxt=0),  # 표 본문셀
 }
 
 # ======================================================================
