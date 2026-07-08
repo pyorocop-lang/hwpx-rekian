@@ -122,6 +122,15 @@ _CODE = re.compile(r"`([^`]+)`")
 _IMG = re.compile(r"!\[([^\]]*)\]\([^)]*\)")
 
 
+_ITAL = re.compile(r"\*([^*\n]+)\*")  # *이탤릭* (볼드 추출 후의 세그먼트에만 적용)
+
+
+def _strip_ital(s: str) -> str:
+    # 별표 이탤릭 마커 제거(스타일 없이 텍스트만). 밑줄(_)은 파일명/식별자 충돌
+    # 때문에 인라인에서 건드리지 않는다(줄 전체 밑줄 감싸기는 block 단계에서 처리).
+    return _ITAL.sub(lambda m: m.group(1), s)
+
+
 def parse_inline(text: str):
     """인라인 마크다운 → [(text, is_bold), ...] 런 목록."""
     text = _IMG.sub(lambda m: m.group(1) or "[이미지]", text)
@@ -131,11 +140,11 @@ def parse_inline(text: str):
     pos = 0
     for m in _BOLD.finditer(text):
         if m.start() > pos:
-            runs.append((text[pos:m.start()], False))
-        runs.append((m.group(1) or m.group(2), True))
+            runs.append((_strip_ital(text[pos:m.start()]), False))
+        runs.append((_strip_ital(m.group(1) or m.group(2)), True))
         pos = m.end()
     if pos < len(text):
-        runs.append((text[pos:], False))
+        runs.append((_strip_ital(text[pos:]), False))
     return [(t, b) for t, b in runs if t]
 
 
@@ -320,6 +329,11 @@ def convert(md_text: str, profile) -> str:
                 rows.append(split_table_row(lines[j])); j += 1
             b.table(header, rows)
             i = j; continue
+
+        # 줄 전체를 감싼 이탤릭( _문장_ )은 바깥 밑줄만 제거 (파일명 밑줄은 보존)
+        um = re.fullmatch(r"_(.+)_", stripped)
+        if um and "_" not in um.group(1):
+            stripped = um.group(1)
 
         # 인용
         if stripped.startswith(">"):
