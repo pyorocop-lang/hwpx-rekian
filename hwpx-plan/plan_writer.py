@@ -58,7 +58,11 @@ CHARPR = {
     6: (1400, 2, False, "#000000"),   # ① 열거 휴먼명조 14pt
     7: (1400, 0, True,  "#000000"),   # 표 헤더 14pt 볼드 고딕
     8: (1400, 2, True,  "#000000"),   # 인라인 볼드 휴먼명조 14pt
+    9: (500,  3, False, "#000000"),   # 빈 문단 간격용 5pt (□ 뒤)
+    10:(300,  2, False, "#000000"),   # 빈 문단 간격용 3pt (ㅇ/- 뒤)
 }
+# 계층 항목 뒤에 넣는 작은 글씨 빈 문단(검토본 방식). 값=간격용 charPr id.
+SPACER_AFTER = {2: 9, 3: 10, 4: 10, 6: 10}   # □→5pt, ㅇ/-/①→3pt
 
 # paraPr: id -> dict(align, left, intent, prev, next)   [case/HwpUnitChar 값]
 #   왼쪽정렬 + 내어쓰기(hanging): 첫 줄은 기호가 왼쪽으로 나오고, 줄바꿈된 줄은
@@ -488,6 +492,9 @@ def parse(md: str, sec: Section):
             first_done = True
         else:
             sec.para(pp, cc, text)
+        # 계층 항목 뒤 작은 글씨 빈 문단(5pt/3pt 간격) — 검토본 방식
+        if pp in SPACER_AFTER:
+            sec.para(pp, SPACER_AFTER[pp], "")
 
     while i < n:
         raw = lines[i]
