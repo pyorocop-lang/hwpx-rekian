@@ -37,34 +37,41 @@ from zipfile import ZIP_DEFLATED, ZIP_STORED, ZipFile
 # ======================================================================
 BODY_WIDTH = 48190          # A4 본문폭 (59528 - 5669*2, 좌우 20mm)
 LINE = 160                  # 기본 줄간격 %
-COLOR_DAEHANG = "#C00000"   # □ 대항목 색 (참조 문서의 색상 □ 반영, 조정 가능)
+COLOR_DAEHANG = "#000000"   # □ 대항목 색 (참조 스펙: 검정 HY헤드라인M, 조정 가능)
 COLOR_LABEL = "#1F4E79"     # (라벨) 강조색 (선택)
 
-# charPr: id -> (pt*100, fontRef(0=돋움/고딕,1=바탕/명조), bold, color)
+# 문단 간격(pt→HWPUNIT, 1pt=100). 참조 스펙: □→ㅇ 5pt, ㅇ→- 3pt.
+GAP_O = 500                 # ㅇ 중항목 위 간격 = 5pt (□ 다음)
+GAP_DASH = 300              # - 세부 위 간격 = 3pt (ㅇ 다음)
+
+# fontRef id: 0=함초롬돋움, 1=함초롬바탕, 2=휴먼명조, 3=HY헤드라인M
+FONTS = ["함초롬돋움", "함초롬바탕", "휴먼명조", "HY헤드라인M"]
+
+# charPr: id -> (pt*100, fontRef, bold, color)   ※ 참조 스펙 반영
 CHARPR = {
-    0: (1500, 1, False, "#000000"),   # 본문 15pt 함초롬바탕
+    0: (1400, 2, False, "#000000"),   # 본문 휴먼명조 14pt
     1: (1600, 0, True,  "#000000"),   # 제목 16pt 볼드 함초롬돋움
-    2: (1500, 0, True,  COLOR_DAEHANG),  # □ 대항목 15pt 볼드 색상
-    3: (1500, 1, False, "#000000"),   # ㅇ 중항목 15pt
-    4: (1500, 1, False, "#000000"),   # - 세부 15pt
-    5: (1200, 1, False, "#595959"),   # * 각주 12pt 회색
-    6: (1500, 1, False, "#000000"),   # ① 열거 15pt
-    7: (1500, 0, True,  "#000000"),   # 표 헤더 15pt 볼드 고딕
-    8: (1500, 1, True,  "#000000"),   # 인라인 볼드 15pt
+    2: (1500, 3, False, COLOR_DAEHANG),  # □ 대항목 HY헤드라인M 15pt
+    3: (1400, 2, False, "#000000"),   # ㅇ 중항목 휴먼명조 14pt
+    4: (1400, 2, False, "#000000"),   # - 세부 휴먼명조 14pt
+    5: (1200, 2, False, "#595959"),   # * 각주 휴먼명조 12pt 회색
+    6: (1400, 2, False, "#000000"),   # ① 열거 휴먼명조 14pt
+    7: (1400, 0, True,  "#000000"),   # 표 헤더 14pt 볼드 고딕
+    8: (1400, 2, True,  "#000000"),   # 인라인 볼드 휴먼명조 14pt
 }
 
 # paraPr: id -> dict(align, left, intent(음수=내어쓰기), prev, next, border)
-#   실제 왼쪽여백=left, 첫줄=left+intent. HWPUNIT.
+#   실제 왼쪽여백=left, 첫줄=left+intent. HWPUNIT. prev=문단 위 간격.
 PARAPR = {
-    0:  dict(align="JUSTIFY", left=0,    intent=0,    prev=0,    nxt=0),    # 본문
-    1:  dict(align="CENTER",  left=0,    intent=0,    prev=0,    nxt=600),  # 제목
-    2:  dict(align="LEFT",    left=600,  intent=-600, prev=300,  nxt=0),    # □ 대항목
-    3:  dict(align="JUSTIFY", left=1400, intent=-600, prev=0,    nxt=0),    # ㅇ 중항목
-    4:  dict(align="JUSTIFY", left=2000, intent=-600, prev=0,    nxt=0),    # - 세부
-    5:  dict(align="JUSTIFY", left=2600, intent=-600, prev=0,    nxt=0),    # * 각주
-    6:  dict(align="JUSTIFY", left=1400, intent=-700, prev=0,    nxt=0),    # ① 열거
-    7:  dict(align="CENTER",  left=0,    intent=0,    prev=0,    nxt=0),    # 표 헤더셀
-    8:  dict(align="JUSTIFY", left=0,    intent=0,    prev=0,    nxt=0),    # 표 본문셀
+    0:  dict(align="JUSTIFY", left=0,    intent=0,    prev=0,       nxt=0),  # 본문
+    1:  dict(align="CENTER",  left=0,    intent=0,    prev=0,       nxt=600),# 제목
+    2:  dict(align="LEFT",    left=600,  intent=-600, prev=300,     nxt=0),  # □ 대항목
+    3:  dict(align="JUSTIFY", left=1400, intent=-600, prev=GAP_O,   nxt=0),  # ㅇ 중항목 (□→ㅇ 5pt)
+    4:  dict(align="JUSTIFY", left=2000, intent=-600, prev=GAP_DASH,nxt=0),  # - 세부 (ㅇ→- 3pt)
+    5:  dict(align="JUSTIFY", left=2600, intent=-600, prev=0,       nxt=0),  # * 각주
+    6:  dict(align="JUSTIFY", left=1400, intent=-700, prev=0,       nxt=0),  # ① 열거
+    7:  dict(align="CENTER",  left=0,    intent=0,    prev=0,       nxt=0),  # 표 헤더셀
+    8:  dict(align="JUSTIFY", left=0,    intent=0,    prev=0,       nxt=0),  # 표 본문셀
 }
 
 # ======================================================================
@@ -159,8 +166,8 @@ def _fontfaces() -> str:
           'strokeVariation="1" armStyle="1" letterform="1" midline="1" xHeight="1"/>')
     out = [f'    <hh:fontfaces itemCnt="{len(langs)}">']
     for lang in langs:
-        out.append(f'      <hh:fontface lang="{lang}" fontCnt="2">')
-        for fid, face in ((0, "함초롬돋움"), (1, "함초롬바탕")):
+        out.append(f'      <hh:fontface lang="{lang}" fontCnt="{len(FONTS)}">')
+        for fid, face in enumerate(FONTS):
             out.append(f'        <hh:font id="{fid}" face="{face}" type="TTF" isEmbedded="0">')
             out.append(f'          {ti}')
             out.append('        </hh:font>')
